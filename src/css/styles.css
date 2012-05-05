@@ -1,0 +1,85 @@
+body {
+	font-family: Helvetica, Arial, Sans-Serif;
+	text-align: center;
+}
+
+#wrapper {
+	width: 600px;
+	margin: auto;
+	text-align: left;
+}
+
+.song {
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+
+.song h2 {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.song button {
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+
+.content {
+	width: 525px;
+	float: right;
+}
+
+.content p {
+	margin-top: 0px;
+}
+
+.buttonImage {
+	width: 24px;
+}
+
+.clear {
+	clear: both;
+}
+
+.progress {
+	height: 20px;
+	padding: 2px;
+	border: solid 1px #000;
+	cursor: pointer;
+}
+
+.meter {
+	width: 33%;
+	background: #666;
+	position: relative;
+	overflow: hidden;
+	display: block;
+	height: 100%;
+}
+
+.linkVisible {
+	display: inline;
+}
+
+.linkInvisible {
+	display: none;
+}
+
+.notSupportedInvisible{
+	display: none;
+}
+
+.notSupportedVisible {
+	display: block;
+}
+
+.playerInvisible {
+	display: none;
+}
+
+.playerVisible {
+	display: block;
+}
+
+

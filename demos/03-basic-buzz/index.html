@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>buzz.js demo</title>
+	<link rel="stylesheet" href="../../src/css/styles.css"/>
+	<script type="text/javascript" src="../../src/dependencies/buzz.js"></script>
+	
+	<script type="text/javascript">
+	
+		var DEMO = (function () {
+		
+			var demo = {};
+			
+			demo.playSound = function () {
+				
+				var sound = new buzz.sound(
+					'../../src/audio/llama',
+					{ formats : ['mp3', 'ogg'] }
+				);
+				
+				sound.play();
+				
+			};
+			
+			return demo;
+		
+		})();
+	
+	</script>
+	
+	<style>
+	
+	pre {
+		background: #ccc;
+		padding: 10px;
+	}
+	
+	code {
+		font-family: Consolas, Courier New, Monospace;
+	}
+	
+	</style>
+</head>
+<body>
+
+<div id="wrapper">
+<h1>Basic buzz.js Demo</h1>
+
+<p><button id="playButton" onclick="DEMO.playSound();">Play</button></p>
+
+<pre><code>demo.playSound = function () {
+	
+	var sound = new buzz.sound(
+		'../../src/audio/llama',
+		{ formats : ['mp3', 'ogg'] }
+	);
+	
+	sound.play();
+	
+};</code></pre>
+
+</div>
+</body>
+</html>

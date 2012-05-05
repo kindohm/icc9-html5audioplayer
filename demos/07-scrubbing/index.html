@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 Audio Player</title>
+	<link rel="stylesheet" href="../../src/css/styles.css"/>
+	
+	<!-- external dependncies (e.g. jquery, knockout, buzz, etc) -->
+	<script type="text/javascript" src="../../src/dependencies/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="../../src/dependencies/knockout-2.0.0.js"></script>
+	<script type="text/javascript" src="../../src/dependencies/buzz.js"></script>
+
+	<!-- our own audio player stuff -->
+	<script type="text/javascript" src="js/catalog.js"></script>	
+	<script type="text/javascript" src="js/player.js"></script>
+	<script type="text/javascript" src="js/viewmodel.js"></script>
+</head>
+<body>
+<div id="wrapper">
+
+	<h1 data-bind="text: title"></h1>
+
+	<div id="player">
+		
+		<div data-bind="template : { name : 'songTemplate', foreach: songs }"></div>
+
+	</div>
+
+	<!-- song template -->
+	<script type="text/html" id="songTemplate">
+		<div class="song">
+
+		<!-- play/pause button -->
+			<button class="toggleButton" data-bind="click: buttonClick">
+				<img class="buttonImage" data-bind="attr: { src : buttonImage }"></img>
+			</button>
+
+			<div class="content">
+			
+				<!-- song title -->
+				<h2 data-bind="text: title" class="songTitle"></h2>
+
+				<p>
+					<a data-bind="attr: { href: mp3, class: mp3Class }">mp3</a>
+					<a data-bind="attr: { href: ogg, class: oggClass  }">ogg</a>
+				</p>
+
+				<!-- progress/scrub meter -->
+				<div class="progress" data-bind="click: progressClick">
+					<span class="meter" 
+						data-bind="style: { width: percentComplete() }"></span>
+				</div>
+				
+			</div>
+			<div class="clear"></div>
+		</div>
+	</script>
+</div>
+</body>
